@@ -23,7 +23,7 @@ import {
 import "./App.css";
 
 
-const API = "https://razormind-backend.onrender.com";
+const API = process.env.REACT_APP_API_URL;
 
 
 // =====================================================
