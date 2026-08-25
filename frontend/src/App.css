@@ -1,0 +1,355 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  color: #172033;
+}
+
+.app {
+  max-width: 1400px;
+  margin: auto;
+  padding: 30px;
+}
+
+
+/* HEADER */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 34px;
+}
+
+header p {
+  margin-top: 6px;
+  color: #687386;
+}
+
+.status {
+  padding: 10px 16px;
+  border-radius: 20px;
+  background: #e7f8ef;
+  color: #17834b;
+  font-weight: bold;
+}
+
+
+/* METRICS */
+
+.metrics {
+  display: grid;
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow:
+    0 3px 15px rgba(0, 0, 0, 0.06);
+}
+
+.card span {
+  color: #687386;
+  font-size: 14px;
+}
+
+.card h2 {
+  margin-bottom: 0;
+  font-size: 28px;
+}
+
+
+/* GRID */
+
+.grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+.panel {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+
+  box-shadow:
+    0 3px 15px rgba(0, 0, 0, 0.06);
+}
+
+.panel h2 {
+  margin-top: 0;
+}
+
+.risk-number {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.panel p {
+  color: #687386;
+}
+
+.panel strong {
+  font-size: 18px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e5e8ee;
+  margin: 20px 0;
+}
+
+
+/* RECOMMENDATION */
+
+.recommendation {
+  border-left: 5px solid #e63946;
+}
+
+.priority {
+  display: inline-block;
+
+  padding: 6px 12px;
+
+  border-radius: 6px;
+
+  background: #ffe8ea;
+
+  color: #d62839;
+
+  font-size: 12px;
+
+  font-weight: bold;
+}
+
+
+/* AI */
+
+.ai-panel {
+  margin-top: 25px;
+
+  background: #172033;
+
+  color: white;
+
+  padding: 30px;
+
+  border-radius: 16px;
+}
+
+.ai-panel p {
+  color: #b9c1d0;
+}
+
+.ask-box {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.ask-box input {
+  flex: 1;
+
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  font-size: 15px;
+}
+
+.ask-box button {
+  padding: 0 25px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.answer {
+  margin-top: 20px;
+
+  padding: 20px;
+
+  background: #242e42;
+
+  border-radius: 10px;
+}
+
+.answer pre {
+  white-space: pre-wrap;
+
+  font-family: Arial, sans-serif;
+
+  line-height: 1.6;
+}
+
+
+/* LOADING */
+
+/* ================================
+   LOADING SCREEN
+================================ */
+
+.loading {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background: #f5f7fb;
+  color: #0f1f3d;
+
+  box-sizing: border-box;
+}
+
+.loading h2 {
+  margin: 0 0 10px 0;
+
+  font-size: 42px;
+  font-weight: 700;
+
+  color: #0f1f3d;
+}
+
+.loading p {
+  margin: 0;
+
+  font-size: 20px;
+  color: #64748b;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+  .metrics {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .grid {
+    grid-template-columns:
+      1fr;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .metrics {
+    grid-template-columns:
+      1fr;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+}
+/* ================================
+   CHARTS
+================================ */
+
+.chart-panel {
+  min-height: 380px;
+}
+
+.chart-container {
+  width: 100%;
+  height: 300px;
+  margin-top: 20px;
+}
+.analysis-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.analysis-controls label {
+  font-weight: 600;
+}
+
+.analysis-controls select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.analysis-controls select:focus {
+  outline: none;
+}
+
+.recovery-section {
+  margin-top: 24px;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-container th,
+.table-container td {
+  padding: 14px 12px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table-container th {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.table-container td {
+  font-size: 14px;
+}
+
+.table-container tbody tr:hover {
+  background: #f8fafc;
+}
+
+
