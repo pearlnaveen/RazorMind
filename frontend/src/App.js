@@ -23,7 +23,7 @@ import {
 import "./App.css";
 
 
-const API = "http://localhost:8000";
+const API = "https://razormind-backend.onrender.com";
 
 
 // =====================================================
